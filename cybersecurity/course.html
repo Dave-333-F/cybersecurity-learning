@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cybersecurity Course</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="navbar-brand">
+                    <h1>Cybersecurity Course</h1>
+                </div>
+                <ul class="navbar-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="course.html" class="active">Courses</a></li>
+                    <li><a href="signup.html" class="btn-signup">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+       
+        <section class="course-selector">
+            <h2>Select a Course Module</h2>
+            <div class="course-buttons">
+                <button class="course-btn active" onclick="showCourse('networking')"> Networking</button>
+                <button class="course-btn" onclick="showCourse('os')"> Operating System</button>
+                <button class="course-btn" onclick="showCourse('programming')"> Programming</button>
+                <button class="course-btn" onclick="showCourse('security')"> Security Fundamentals</button>
+                <button class="course-btn" onclick="showCourse('threats')"> Threats & Vulnerabilities</button>
+                <button class="course-btn" onclick="showCourse('monitoring')"> Monitoring & Analysis</button>
+                <button class="course-btn" onclick="showCourse('incident')"> Incident Response</button>
+                <button class="course-btn" onclick="showCourse('assessments')"> Assessments</button>
+            </div>
+        </section>
+
+        <div class="container">
+            <main class="content">
+            
+                <article class="course-content" id="course-networking">
+                    <section class="course-header">
+                        <h1> Introduction to Networking</h1>
+                        <p class="course-description">Computer networking is the backbone of the digital world. At its simplest, a network consists of two or more computers connected together so they can share data, resources (like printers or internet connections), and communicate.</p>
+                    </section>
+
+                    <section class="lesson-section">
+                        <h2>1. The Core Components</h2>
+                        <p>Every network requires a mix of hardware to connect devices and direct traffic.</p>
+                        <ul>
+                            <li><strong>End Devices:</strong> These are the source and destination of data—laptops, smartphones, servers, and smart TVs.</li>
+                            <li><strong>Switches:</strong> A switch connects multiple devices together <strong>within the same local network</strong> (like a local area network, or LAN). It acts like a smart power strip, directing data only to the specific device it was meant for.</li>
+                            <li><strong>Routers:</strong> A router connects <strong>entirely different networks</strong> together. Its job is to look at a piece of data's destination and choose the best path for it to travel across the internet to get there.</li>
+                        </ul>
+                    </section>
+
+                    <section class="lesson-section">
+                        <h2>2. Network Models (The Rules of the Road)</h2>
+                        <p>For different devices (like an Apple iPhone and a Dell server) to talk to each other, they have to agree on a strict set of rules called <strong>protocols</strong>. These rules are organized into layers, most commonly represented by the <strong>TCP/IP Model</strong>.</p>
+                        <p>When you send a message, it travels from the top layer down to the physical hardware, across the network, and back up the layers on the receiving device.</p>
+
+                        <h3>The Four Layers of TCP/IP</h3>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Layer</th>
+                                    <th>Primary Function</th>
+                                    <th>Everyday Example / Protocol</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Application</strong></td>
+                                    <td>Where user data originates and interacts with software.</td>
+                                    <td><strong>HTTP</strong> (Websites), <strong>DNS</strong> (Translates domain names to IP addresses)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Transport</strong></td>
+                                    <td>Manages the connection between two devices and ensures data arrives intact.</td>
+                                    <td><strong>TCP</strong> (Reliable, checks for errors) / <strong>UDP</strong> (Fast, used for live video/gaming)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Network</strong></td>
+                                    <td>Handles routing and logical addressing across different networks.</td>
+                                    <td><strong>IP</strong> (Internet Protocol), <strong>Routers</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Network Access</strong></td>
+                                    <td>Moves raw bits over physical mediums (wires, airwaves).</td>
+                                    <td><strong>Ethernet</strong> cables, <strong>Wi-Fi</strong>, <strong>Switches</strong>, <strong>MAC addresses</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="lesson-section">
+                        <h2>3. Essential Network Services</h2>
+                        <p>When you type a website name into your browser, two critical background protocols make it work instantly:</p>
+
+                        <div class="highlight-box">
+                            <h4>DNS (Domain Name System)</h4>
+                            <p>The phonebook of the internet. It translates human-friendly names like <code>wikipedia.org</code> into machine-friendly IP addresses like <code>198.35.26.96</code>.</p>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h4>DHCP (Dynamic Host Configuration Protocol)</h4>
+                            <p>The service that automatically hands your phone or laptop an IP address the second you connect to a Wi-Fi network so you don't have to configure it manually.</p>
+                        </div>
+                    </section>
+
+                    <section class="lesson-section">
+                        <h2>4. Network Scale: LAN vs. WAN</h2>
+                        <p>Networks are generally categorized by the geographic area they cover:</p>
+                        <ul>
+                            <li><strong>LAN (Local Area Network):</strong> A network restricted to a small geographic area, like your home, a single office building, or a school. It is fast, private, and highly secure.</li>
+                            <li><strong>WAN (Wide Area Network):</strong> A network that connects multiple LANs across large geographical distances. The <strong>Internet</strong> is the largest and most famous example of a WAN, spanning the entire globe.</li>
+                        </ul>
+                    </section>
+
+                    <section class="lesson-section">
+                        <h2>Networking Basics Quiz</h2>
+                        <p>Test your knowledge of networking concepts with this interactive quiz:</p>
+                        
+                        <input type="checkbox" id="submit" style="display: none;">
+
+                        <div class="question-block">
+                            <div class="question-text">1. Which protocol is primarily used to translate human-readable domain names (like ://google.com) to IP addresses?</div>
+                            <ul class="options-list">
+                                <label><input type="radio" name="q1" value="A"><span>A) DHCP</span></label>
+                                <label><input type="radio" name="q1" value="B"><span>B) DNS</span></label>
+                                <label><input type="radio" name="q1" value="C"><span>C) FTP</span></label>
+                                <label><input type="radio" name="q1" value="D"><span>D) HTTP</span></label>
+                            </ul>
+                        </div>
+
+                        <div class="question-block">
+                            <div class="question-text">2. Which device operates primarily at Layer 3 (Network Layer) of the OSI model?</div>
+                            <ul class="options-list">
+                                <label><input type="radio" name="q2" value="A"><span>A) Hub</span></label>
+                                <label><input type="radio" name="q2" value="B"><span>B) Switch</span></label>
+                                <label><input type="radio" name="q2" value="C"><span>C) Router</span></label>
+                                <label><input type="radio" name="q2" value="D"><span>D) Repeater</span></label>
+                            </ul>
+                        </div>
+
+                        <div class="question-block">
+                            <div class="question-text">3. What does IP address stand for in computer networking?</div>
+                            <ul class="options-list">
+                                <label><input type="radio" name="q3" value="A"><span>A) Internet Protocol</span></label>
+                                <label><input type="radio" name="q3" value="B"><span>B) Intranet Program</span></label>
+                                <label><input type="radio" name="q3" value="C"><span>C) Internal Process</span></label>
+                                <label><input type="radio" name="q3" value="D"><span>D) Information Provider</span></label>
+                            </ul>
+                        </div>
+
+                        <div class="question-block">
+                            <div class="question-text">4. Which of the following is considered a Class C IP address subnet mask?</div>
+                            <ul class="options-list">
+                                <label><input type="radio" name="q4" value="A"><span>A) 255.0.0.0</span></label>
+                                <label><input type="radio" name="q4" value="B"><span>B) 255.255.0.0</span></label>
+                                <label><input type="radio" name="q4" value="C"><span>C) 255.255.255.0</span></label>
+                                <label><input type="radio" name="q4" value="D"><span>D) 255.255.255.255</span></label>
+                            </ul>
+                        </div>
+
+                        <div class="question-block">
+                            <div class="question-text">5. What is the standard port number used for HTTPS traffic?</div>
+                            <ul class="options-list">
+                                <label><input type="radio" name="q5" value="A"><span>A) 80</span></label>
+                                <label><input type="radio" name="q5" value="B"><span>B) 21</span></label>
+                                <label><input type="radio" name="q5" value="C"><span>C) 53</span></label>
+                                <label><input type="radio" name="q5" value="D"><span>D) 443</span></label>
+                            </ul>
+                        </div>
+
+                        <label for="submit" class="submit-btn">Submit & View Results</label>
+                        <div class="results">
+                            <h2>Quiz Submitted!</h2>
+                            <p>Thanks for testing your networking knowledge.Review your answers if they are corrects.</p>
+                            
+                            <details class="answer-key">
+                                <summary>Click to View Answer Key</summary>
+                                <ul>
+                                    <li><strong>Q1:</strong> B) DNS</li>
+                                    <li><strong>Q2:</strong> C) Router</li>
+                                    <li><strong>Q3:</strong> A) Internet Protocol</li>
+                                    <li><strong>Q4:</strong> C) 255.255.255.0</li>
+                                    <li><strong>Q5:</strong> D) 443</li>
+                                </ul>
+                            </details>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="course-content" id="course-os" style="display:none;">
+                    <section class="course-header">
+                        <h1> Operating System Fundamentals</h1>
+                        <p class="course-description">Understand operating systems, their architecture, and their critical role in cybersecurity.</p>
+                    </section>
+                    <section class="lesson-section">
+                      <h2>What You Will Learn</h2>
+            <p>By the end of this course, you will understand how a computer manages competing demands for resources like CPU time, memory space, and file storage. We will bridge the gap between high-level code and bare-metal execution.</p>
+                    </section>
+                  <section>
+            <h2>Core Course Pillars</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>1. Process Management</h3>
+                    <p>Learn how the CPU switches between multiple programs seamlessly using scheduling algorithms, and study threads, concurrency, and deadlock prevention.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Memory Management</h3>
+                    <p>Explore how physical RAM is optimized using techniques like virtual memory, paging, segmentation, and caching strategies.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Storage & File Systems</h3>
+                    <p>Understand how data is structured, stored, and retrieved from physical disks and modern SSDs, including file access permissions and directory structures.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Prerequisites</h2>
+            <ul>
+                <li>Proficiency in a low-level language (preferably <strong>C or C++</strong>)</li>
+                <li>Basic understanding of Computer Architecture (registers, ALU, CPU cycles)</li>
+                <li>Familiarity with data structures (queues, stacks, linked lists)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Recommended Textbook</h2>
+            <blockquote style="background-color: blue;">
+                "Operating System Concepts" (The Dinosaur Book) by Silberschatz, Galvin, and Gagne.
+            </blockquote>
+        </section>
+    </main>
+                </article>
+            
+                <article class="course-content" id="course-programming" style="display:none;">
+                    <section class="course-header">
+                        <h1> Programming & Scripting</h1>
+                        <p class="course-description">Master programming languages and scripting for security automation.</p>
+                    </section>
+                    <section class="lesson-section">
+                        <h2>Coming Soon</h2>
+                        <p>Detailed content on Programming & Scripting will be available soon.</p>
+                    </section>
+                </article>
+
+              
+                <article class="course-content" id="course-security" style="display:none;">
+                    <section class="course-header">
+                        <h1> Security Fundamentals</h1>
+                        <p class="course-description">Core concepts of information security and protection mechanisms.</p>
+                    </section>
+                    <section class="lesson-section"><main>
+        <section class="course-info">
+            <strong>Course Overview:</strong> An Operating System (OS) is the vital software layer that manages a computer's hardware and provides a user-friendly interface for applications. This course explores the core concepts, elegant abstractions, and underlying mechanisms that make modern computing possible.
+        </section>
+
+        <section>
+            <h2>What You Will Learn</h2>
+            <p>By the end of this course, you will understand how a computer manages competing demands for resources like CPU time, memory space, and file storage. We will bridge the gap between high-level code and bare-metal execution.</p>
+        </section>
+
+        <section>
+            <h2>Core Course Pillars</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>1. Process Management</h3>
+                    <p>Learn how the CPU switches between multiple programs seamlessly using scheduling algorithms, and study threads, concurrency, and deadlock prevention.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Memory Management</h3>
+                    <p>Explore how physical RAM is optimized using techniques like virtual memory, paging, segmentation, and caching strategies.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Storage & File Systems</h3>
+                    <p>Understand how data is structured, stored, and retrieved from physical disks and modern SSDs, including file access permissions and directory structures.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Prerequisites</h2>
+            <ul>
+                <li>Proficiency in a low-level language (preferably <strong>C or C++</strong>)</li>
+                <li>Basic understanding of Computer Architecture (registers, ALU, CPU cycles)</li>
+                <li>Familiarity with data structures (queues, stacks, linked lists)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Recommended Textbook</h2>
+            <blockquote style="background: #fff; padding: 15px; border-left: 4px solid #2c3e50; font-style: italic;">
+                "Operating System Concepts" (The Dinosaur Book) by Silberschatz, Galvin, and Gagne.
+            </blockquote>
+        </section>
+    </main>
+                        <h2>OPERATING SYSTEM</h2>
+                        <p>Detailed content on Security Fundamentals will be available soon.</p>
+                    </section>
+                </article>
+
+            
+                <article class="course-content" id="course-threats" style="display:none;">
+                    <section class="course-header">
+                        <h1> Threats and Vulnerabilities</h1>
+                        <p class="course-description">Identify and analyze security threats, risks, and vulnerabilities.</p>
+                    <div class="threat-title">What is a Threat?</div>
+                    <p>A <strong>threat</strong> is any potential occurrence or event—whether malicious, accidental, or environmental—that could cause harm, theft, data loss, or disruption to an organization's assets or operations.</p>
+                    <p><em>Analogy:</em> A burglar looking for a house to rob, or a severe thunderstorm that might cause a power outage.</p>
+                </div>
+                <div class="card vuln-card">
+                    <div class="vuln-title">What is a Vulnerability?</div>
+                    <p>A <strong>vulnerability</strong> is a flaw, weakness, or gap in an information system, security procedure, internal control, or implementation that can be exploited by a threat source.</p>
+                    <p><em>Analogy:</em> A broken lock on the back door of a house, or leaving a window wide open.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories">
+            <h2>Categories and Examples</h2>
+            
+            <h3>Common Types of Threats</h3>
+            <ul>
+                <li><strong>Malicious Threats:</strong> Malware (ransomware, spyware), Phishing attacks, DDoS attacks, and insider threats (disgruntled employees).</li>
+                <li><strong>Accidental Threats:</strong> Employee error, such as misconfiguring a cloud database or accidentally deleting critical code.</li>
+                <li><strong>Environmental Threats:</strong> Natural disasters like earthquakes, floods, fires, or hardware failures due to power surges.</li>
+            </ul>
+
+            <h3>Common Types of Vulnerabilities</h3>
+            <ul>
+                <li><strong>Software Vulnerabilities:</strong> Code bugs like Buffer Overflows, SQL Injection (SQLi), or Cross-Site Scripting (XSS).</li>
+                <li><strong>Human Vulnerabilities:</strong> Lack of security awareness, making staff susceptible to social engineering or phishing.</li>
+                <li><strong>Configuration Vulnerabilities:</strong> Using default passwords, leaving unneeded ports open, or outdated firmware.</li>
+            </ul>
+        </section>
+
+        <section id="relationship">
+            <h2>How Threats and Vulnerabilities Interact</h2>
+            <p>A threat cannot harm a system unless a vulnerability exists that it can exploit. Conversely, a vulnerability poses no immediate danger if there is no threat capable of or interested in exploiting it. When a threat successfully exploits a vulnerability, it results in a <strong>security incident or breach</strong>.</p>
+            
+            <p>This intersection is mathematically defined in Cybersecurity Risk Management by the following formula:</p>
+            <div class="formula">
+                Risk = Threat &times; Vulnerability &times; Asset Value
+            </div>
+            <p>Without either a threat or a vulnerability, the overall operational risk drops to zero.</p>
+        </section>
+
+        <section id="comparison">
+            <h2>Quick Comparison Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Threat</th>
+                        <th>Vulnerability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Origin</strong></td>
+                        <td>External or Internal forces (People, Nature, Code)</td>
+                        <td>Internal systemic flaws (System design, Controls, People)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Control</strong></td>
+                        <td>Cannot be directly controlled or eliminated</td>
+                        <td>Can be patched, mitigated, or fixed internally</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nature</strong></td>
+                        <td>The actor or action that causes the harm</td>
+                        <td>The weakness that allows the harm to happen</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Action Required</strong></td>
+                        <td>Monitor, Detect, Defend against</td>
+                        <td>Identify, Assess, Patch, Mitigate</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="mitigation">
+            <h2>Defensive Strategies</h2>
+            <p>Organizations must approach threats and vulnerabilities differently to establish a robust security perimeter:</p>
+            <ol>
+                <li><strong>Managing Vulnerabilities:</strong> Conduct regular vulnerability scans, perform routine penetration testing, enforce patch management protocols, and deliver continuous security awareness training to staff.</li>
+                <li><strong>Defending Against Threats:</strong> Deploy firewalls, intrusion detection/prevention systems (IDS/IPS), endpoint detection and response (EDR), and maintain immutable backups to bounce back from active attacks.</li>
+            </ol>
+        </section>
+
+    </div>
+                    </section>
+                    <section class="lesson-section">
+                        <h2>OPERATING SYSTEM COURSES</h2>
+                        <p>Detailed content on Threats and Vulnerabilities will be available soon.</p>
+                    </section>
+                </article>
+
+              
+                <article class="course-content" id="course-monitoring" style="display:none;">
+                    <section class="course-header">
+                        <h1> Monitoring & Analysis</h1>
+                        <p class="course-description">Learn to monitor systems and analyze security events and logs.</p>
+                    </section>
+                    <section class="lesson-section">
+                        <h2>Coming Soon</h2>
+                        <p>Detailed content on Monitoring & Analysis will be available soon.</p>
+                    </section>
+                </article>
+
+               
+                <article class="course-content" id="course-incident" style="display:none;">
+                    <section class="course-header">
+                        <h1> Incident Response</h1>
+                        <p class="course-description">Respond to and manage security incidents effectively.</p>
+                    </section>
+                    <section class="lesson-section">
+                        <h2>Coming Soon</h2>
+                        <p>Detailed content on Incident Response will be available soon.</p>
+                    </section>
+                </article>
+
+               
+                <article class="course-content" id="course-assessments" style="display:none;">
+                    <section class="course-header">
+                        <h1>Assessments & Quizzes</h1>
+                        <p class="course-description">Test your knowledge with quizzes and practical assessments.</p>
+                    </section>               
+                <ul>
+                    <li><strong>Q1:</strong> B) DNS</li>
+                    <li><strong>Q2:</strong> C) Router</li>
+                    <li><strong>Q3:</strong> A) Internet Protocol</li>
+                    <li><strong>Q4:</strong> C) 255.255.255.0</li>
+                    <li><strong>Q5:</strong> D) 443</li>
+                </ul>
+            </details>
+        </div>
+    </div>
+                    
+                        <h2>Coming Soon</h2>
+
+                        <p>Assessments and quizzes will be available soon.</p>
+                    </section>
+                </article>
+            </main>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Cybersecurity Course. All rights reserved.</p>
+                <nav class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                </nav>
+            </div>
+        </footer>
+
+        <script>//javascript for courses and for selection
+            function showCourse(courseId) {
+            
+                const courses = document.querySelectorAll('.course-content');
+                courses.forEach(course => course.style.display = 'none');
+                
+                
+                const buttons = document.querySelectorAll('.course-btn');
+                buttons.forEach(btn => btn.classList.remove('active'));
+                
+                
+                const selectedCourse = document.getElementById('course-' + courseId);
+                if (selectedCourse) {
+                    selectedCourse.style.display = 'block';
+                }
+                
+                
+                event.target.classList.add('active');
+                
+                
+                selectedCourse.scrollIntoView({ behavior: 'smooth' });
+            }
+        </script>
+    </body>
+</html>
