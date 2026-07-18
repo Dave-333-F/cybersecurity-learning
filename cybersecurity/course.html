@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cybersecurity Course</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="../css/stylesheet.css">
     </head>
     <body>
         <header>
@@ -23,18 +23,22 @@
         <section class="course-selector">
             <h2>Select a Course Module</h2>
             <div class="course-buttons">
-                <button class="course-btn active" onclick="showCourse('networking')"> Networking</button>
-                <button class="course-btn" onclick="showCourse('os')"> Operating System</button>
-                <button class="course-btn" onclick="showCourse('programming')"> Programming</button>
-                <button class="course-btn" onclick="showCourse('security')"> Security Fundamentals</button>
-                <button class="course-btn" onclick="showCourse('threats')"> Threats & Vulnerabilities</button>
-                <button class="course-btn" onclick="showCourse('monitoring')"> Monitoring & Analysis</button>
-                <button class="course-btn" onclick="showCourse('incident')"> Incident Response</button>
-                <button class="course-btn" onclick="showCourse('assessments')"> Assessments</button>
+                <button class="course-btn active" data-course="networking"> Networking</button>
+                <button class="course-btn" data-course="os"> Operating System</button>
+                <button class="course-btn" data-course="programming"> Programming</button>
+                <button class="course-btn" data-course="security"> Security Fundamentals</button>
+                <button class="course-btn" data-course="threats"> Threats & Vulnerabilities</button>
+                <button class="course-btn" data-course="monitoring"> Monitoring & Analysis</button>
+                <button class="course-btn" data-course="incident"> Incident Response</button>
+                <button class="course-btn" data-course="assessments"> Assessments</button>
             </div>
         </section>
 
         <div class="container">
+            <aside class="visitor-info" id="visitor-info">
+                <h3>Visitor Details</h3>
+                <p id="visitor-details">Checking your browser visit details...</p>
+            </aside>
             <main class="content">
             
                 <article class="course-content" id="course-networking">
@@ -116,11 +120,9 @@
                         </ul>
                     </section>
 
-                    <section class="lesson-section">
+                    <section class="lesson-section quiz-section" id="networking-quiz">
                         <h2>Networking Basics Quiz</h2>
                         <p>Test your knowledge of networking concepts with this interactive quiz:</p>
-                        
-                        <input type="checkbox" id="submit" style="display: none;">
 
                         <div class="question-block">
                             <div class="question-text">1. Which protocol is primarily used to translate human-readable domain names (like ://google.com) to IP addresses?</div>
@@ -172,13 +174,13 @@
                             </ul>
                         </div>
 
-                        <label for="submit" class="submit-btn">Submit & View Results</label>
-                        <div class="results">
+                        <button type="button" class="submit-btn" id="submit-networking-quiz">Submit & View Results</button>
+                        <div class="results" id="networking-results">
                             <h2>Quiz Submitted!</h2>
-                            <p>Thanks for testing your networking knowledge.Review your answers if they are corrects.</p>
+                            <p>Thanks for testing your networking knowledge. Review your answers if they are correct.</p>
                             
                             <details class="answer-key">
-                                <summary>Click to View Answer Key</summary>
+                                <summary>Answer Key</summary>
                                 <ul>
                                     <li><strong>Q1:</strong> B) DNS</li>
                                     <li><strong>Q2:</strong> C) Router</li>
@@ -229,7 +231,7 @@
 
         <section>
             <h2>Recommended Textbook</h2>
-            <blockquote style="background-color: blue;">
+            <blockquote>
                 "Operating System Concepts" (The Dinosaur Book) by Silberschatz, Galvin, and Gagne.
             </blockquote>
         </section>
@@ -243,7 +245,7 @@
                     </section>
                     <section class="lesson-section">
                         <h2>Coming Soon</h2>
-                        <p>Detailed content on Programming & Scripting will be available soon.</p>
+                        <p>DThis course introduces the fundamentals of programming and scripting used in cybersecurity. Students will learn how to write programs, automate tasks, analyze data, and build simple web applications using popular programming languages. By the end of the course, learners will be able to create scripts, understand programming logic, and apply these skills in ethical hacking and cybersecurity.</p>
                     </section>
                 </article>
 
@@ -460,28 +462,6 @@
             </div>
         </footer>
 
-        <script>//javascript for courses and for selection
-            function showCourse(courseId) {
-            
-                const courses = document.querySelectorAll('.course-content');
-                courses.forEach(course => course.style.display = 'none');
-                
-                
-                const buttons = document.querySelectorAll('.course-btn');
-                buttons.forEach(btn => btn.classList.remove('active'));
-                
-                
-                const selectedCourse = document.getElementById('course-' + courseId);
-                if (selectedCourse) {
-                    selectedCourse.style.display = 'block';
-                }
-                
-                
-                event.target.classList.add('active');
-                
-                
-                selectedCourse.scrollIntoView({ behavior: 'smooth' });
-            }
-        </script>
+        <script src="../js/site.js"></script>
     </body>
 </html>
