@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cybersecurity-course</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Cybersecurity</div>
-        <ul class="nav-links">
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="course.html">Courses</a></li>
-            <li><a href="login.html">Sign Up</a></li>
-        </ul>
-    </nav>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="logo">Cybersecurity</div>
+            <ul class="nav-links">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="login.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="hero-section">
         <div class="hero-left">
@@ -47,7 +49,7 @@
                 <div class="stat-label">Students</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number">16+</div>
+                <div class="stat-number">10+</div>
                 <div class="stat-label">Courses</div>
             </div>
             <div class="stat-box">
@@ -111,7 +113,12 @@
         </div>
     </div>
 
-    <footer>
+    <section style="padding: 30px 20px; text-align: center;">
+        <h2 style="margin-bottom: 15px;">Watch a Cybersecurity Intro</h2>
+        <iframe width="560" height="315" src="../media/cybersecurity_introduction.mp4" title="Cybersecurity introduction video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width: 100%; border-radius: 10px;"></iframe>
+    </section>
+
+    <footer class="site-footer">
         <p>&copy; 2026 Cybersecurity Course. All rights reserved.</p>
     </footer>
 </body>
